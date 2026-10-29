@@ -1,0 +1,55 @@
+{
+  "n_train": 3751,
+  "n_test": 938,
+  "models": {
+    "tfidf_logreg": {
+      "micro_f1": 0.794,
+      "macro_f1": 0.7181,
+      "samples_f1": 0.7965,
+      "per_class_f1": {
+        "Agriculture,Rural & Environment": 0.93,
+        "Banking,Financial Services and Insurance": 0.667,
+        "Business & Entrepreneurship": 0.829,
+        "Education & Learning": 0.869,
+        "Health & Wellness": 0.739,
+        "Housing & Shelter": 0.65,
+        "Public Safety,Law & Justice": 0.8,
+        "Science, IT & Communications": 0.682,
+        "Skills & Employment": 0.56,
+        "Social welfare & Empowerment": 0.791,
+        "Sports & Culture": 0.895,
+        "Transport & Infrastructure": 0.276,
+        "Travel & Tourism": 0.769,
+        "Utility & Sanitation": 0.545,
+        "Women and Child": 0.768
+      }
+    },
+    "e5_embeddings_logreg": {
+      "micro_f1": 0.7027,
+      "macro_f1": 0.6176,
+      "samples_f1": 0.729,
+      "per_class_f1": {
+        "Agriculture,Rural & Environment": 0.887,
+        "Banking,Financial Services and Insurance": 0.55,
+        "Business & Entrepreneurship": 0.77,
+        "Education & Learning": 0.851,
+        "Health & Wellness": 0.57,
+        "Housing & Shelter": 0.58,
+        "Public Safety,Law & Justice": 0.421,
+        "Science, IT & Communications": 0.444,
+        "Skills & Employment": 0.427,
+        "Social welfare & Empowerment": 0.736,
+        "Sports & Culture": 0.824,
+        "Transport & Infrastructure": 0.316,
+        "Travel & Tourism": 0.636,
+        "Utility & Sanitation": 0.5,
+        "Women and Child": 0.751
+      }
+    }
+  },
+  "wilcoxon_per_scheme_f1": {
+    "statistic": 37790.0,
+    "p_value": 2.062879276592542e-14,
+    "mean_diff_tfidf_minus_e5": 0.0675
+  }
+}

@@ -1,0 +1,12 @@
+INFO:     Started server process [9388]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
+INFO:     127.0.0.1:51908 - "GET /health HTTP/1.1" 200 OK
+Could not reach the Hub (Cannot reach https://huggingface.co/api/models/intfloat/multilingual-e5-small: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'intfloat/multilingual-e5-small'.
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights:   7%|▋         | 13/199 [00:00<00:01, 107.60it/s]Loading weights:  15%|█▍        | 29/199 [00:00<00:01, 133.83it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 739.02it/s]
+Could not reach the Hub (Cannot reach https://huggingface.co/api/models/cross-encoder/mmarco-mMiniLMv2-L12-H384-v1: offline mode is enabled. To disable it, please unset the `HF_HUB_OFFLINE` environment variable.). Using cached commit hash for 'cross-encoder/mmarco-mMiniLMv2-L12-H384-v1'.
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]Loading weights:   5%|▍         | 10/201 [00:00<00:02, 88.03it/s]Loading weights:  16%|█▋        | 33/201 [00:00<00:01, 165.37it/s]Loading weights: 100%|██████████| 201/201 [00:00<00:00, 799.12it/s]
+INFO:     127.0.0.1:53644 - "POST /recommend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64470 - "POST /recommend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64473 - "POST /recommend HTTP/1.1" 200 OK

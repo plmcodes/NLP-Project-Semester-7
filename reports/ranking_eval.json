@@ -1,0 +1,91 @@
+{
+  "known_item": {
+    "n_queries": 150,
+    "results": {
+      "1 keyword (scheme names)": {
+        "MRR": 0.1892,
+        "Recall@1": 0.1533,
+        "Recall@10": 0.28,
+        "nDCG@10": 0.2061
+      },
+      "2 TF-IDF": {
+        "MRR": 0.4999,
+        "Recall@1": 0.4067,
+        "Recall@10": 0.6867,
+        "nDCG@10": 0.538
+      },
+      "3 BM25": {
+        "MRR": 0.5599,
+        "Recall@1": 0.4733,
+        "Recall@10": 0.74,
+        "nDCG@10": 0.5981
+      },
+      "4 dense (e5)": {
+        "MRR": 0.4953,
+        "Recall@1": 0.4067,
+        "Recall@10": 0.6867,
+        "nDCG@10": 0.5338
+      },
+      "5 BM25 + dense (RRF)": {
+        "MRR": 0.5709,
+        "Recall@1": 0.4667,
+        "Recall@10": 0.78,
+        "nDCG@10": 0.6159
+      },
+      "6 hybrid + cross-encoder re-rank": {
+        "MRR": 0.5384,
+        "Recall@1": 0.4067,
+        "Recall@10": 0.78,
+        "nDCG@10": 0.5918
+      }
+    },
+    "wilcoxon_reciprocal_rank": {
+      "3 BM25 vs 5 BM25 + dense (RRF)": {
+        "p_value": 0.14722828205536992,
+        "mean_rr_diff": -0.011
+      },
+      "4 dense (e5) vs 5 BM25 + dense (RRF)": {
+        "p_value": 0.00011808626702271323,
+        "mean_rr_diff": -0.0756
+      },
+      "5 BM25 + dense (RRF) vs 6 hybrid + cross-encoder re-rank": {
+        "p_value": 0.21181997545109632,
+        "mean_rr_diff": 0.0324
+      },
+      "2 TF-IDF vs 3 BM25": {
+        "p_value": 0.017171063773205545,
+        "mean_rr_diff": -0.06
+      }
+    },
+    "example_queries": [
+      {
+        "query": "The Mukhyamantri Ayushman Arogya Yojana, launched on 1 May 2021, aims to reduce medical expenses by offering free treatment for 1,798 procedures in government and",
+        "target": "Mukhyamantri Ayushman Aarogya Yojana"
+      },
+      {
+        "query": "This certificate provides 5% horizontal reservation in Government/Non-Government services for affected children, including those whose both biological or adoptive parents have died within 21 years",
+        "target": "Procedure for Making \"Orphan Certificate\" for Getting Horizontal Reservation for Orphan Children"
+      },
+      {
+        "query": "The scheme aims to enhance skill development capacity in the ESDM sector. Through this scheme, financial assistance and industry-relevant training are provided to students and",
+        "target": "Scheme for Financial Assistance to select States/UTs for Skill Development in Electronics System Design and Manufacturing (ESDM) sector"
+      }
+    ]
+  },
+  "hindi_consistency": {
+    "n_pairs": 20,
+    "mean_overlap_at_10": {
+      "BM25": 0.0,
+      "dense (e5)": 0.455,
+      "BM25 + dense (RRF)": 0.375
+    }
+  },
+  "filter_agreement": {
+    "n_personas": 200,
+    "precision_vs_silver": 0.937,
+    "recall_vs_silver": 0.857,
+    "jaccard": 0.809,
+    "share_of_schemes_kept": 0.109
+  },
+  "labelled_queries": null
+}

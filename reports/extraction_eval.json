@@ -1,0 +1,96 @@
+{
+  "n_schemes": 4693,
+  "rules_vs_silver": {
+    "age_min": {
+      "precision": 0.811,
+      "recall": 0.809,
+      "f1": 0.81,
+      "accuracy": 0.93,
+      "pred_found": 1051,
+      "ref_found": 1053
+    },
+    "age_max": {
+      "precision": 0.834,
+      "recall": 0.8,
+      "f1": 0.817,
+      "accuracy": 0.945,
+      "pred_found": 753,
+      "ref_found": 785
+    },
+    "income_max": {
+      "precision": 0.923,
+      "recall": 0.959,
+      "f1": 0.941,
+      "accuracy": 0.981,
+      "pred_found": 809,
+      "ref_found": 779
+    },
+    "gender_female": {
+      "precision": 0.642,
+      "recall": 0.931,
+      "f1": 0.76,
+      "accuracy": 0.944,
+      "pred_pos": 650,
+      "ref_pos": 448
+    },
+    "disability": {
+      "precision": 0.637,
+      "recall": 0.916,
+      "f1": 0.751,
+      "accuracy": 0.96,
+      "pred_pos": 443,
+      "ref_pos": 308
+    },
+    "bpl": {
+      "precision": 0.597,
+      "recall": 0.904,
+      "f1": 0.719,
+      "accuracy": 0.976,
+      "pred_pos": 238,
+      "ref_pos": 157
+    },
+    "residence_rural": {
+      "precision": 0.717,
+      "recall": 0.493,
+      "f1": 0.584,
+      "accuracy": 0.99,
+      "pred_pos": 46,
+      "ref_pos": 67
+    },
+    "residence_urban": {
+      "precision": 0.233,
+      "recall": 0.538,
+      "f1": 0.326,
+      "accuracy": 0.988,
+      "pred_pos": 60,
+      "ref_pos": 26
+    },
+    "castes": {
+      "SC": {
+        "precision": 0.733,
+        "recall": 0.888,
+        "f1": 0.803
+      },
+      "ST": {
+        "precision": 0.693,
+        "recall": 0.949,
+        "f1": 0.801
+      },
+      "OBC": {
+        "precision": 0.631,
+        "recall": 0.866,
+        "f1": 0.73
+      },
+      "General": {
+        "precision": 0.297,
+        "recall": 0.31,
+        "f1": 0.303
+      },
+      "micro": {
+        "precision": 0.674,
+        "recall": 0.862,
+        "f1": 0.756
+      }
+    }
+  }
+}

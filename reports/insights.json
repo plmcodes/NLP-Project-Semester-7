@@ -1,0 +1,151 @@
+{
+  "n_schemes": 4693,
+  "central": 684,
+  "state": 4009,
+  "n_states_uts": 36,
+  "by_category": {
+    "Social welfare & Empowerment": 1431,
+    "Education & Learning": 1094,
+    "Agriculture,Rural & Environment": 848,
+    "Business & Entrepreneurship": 753,
+    "Women and Child": 466,
+    "Skills & Employment": 399,
+    "Banking,Financial Services and Insurance": 321,
+    "Health & Wellness": 282,
+    "Sports & Culture": 264,
+    "Housing & Shelter": 135,
+    "Science, IT & Communications": 118,
+    "Transport & Infrastructure": 104,
+    "Travel & Tourism": 96,
+    "Utility & Sanitation": 58,
+    "Public Safety,Law & Justice": 34
+  },
+  "by_state_top15": {
+    "Central": 684,
+    "Gujarat": 636,
+    "Uttarakhand": 440,
+    "Madhya Pradesh": 283,
+    "Goa": 269,
+    "Puducherry": 267,
+    "Haryana": 246,
+    "Tamil Nadu": 232,
+    "Rajasthan": 156,
+    "Bihar": 112,
+    "West Bengal": 110,
+    "Chhattisgarh": 106,
+    "Jharkhand": 95,
+    "Maharashtra": 83,
+    "Meghalaya": 83
+  },
+  "targets": {
+    "women_only": 650,
+    "sc_st": 691,
+    "obc": 195,
+    "disability": 443,
+    "bpl": 238,
+    "has_income_cap": 809,
+    "has_age_rule": 1194
+  },
+  "income_cap_median": 240000,
+  "income_cap_quartiles": [
+    100000,
+    450000
+  ],
+  "occupations_mentioned": {
+    "student": 975,
+    "farmer": 510,
+    "construction worker": 384,
+    "entrepreneur": 366,
+    "widow": 185,
+    "researcher": 183,
+    "artisan": 133,
+    "fisherman": 124,
+    "unorganised worker": 105,
+    "artist": 98,
+    "ex-serviceman": 67,
+    "senior citizen": 59
+  },
+  "documents": {
+    "Aadhaar card": 2753,
+    "Bank account details": 2287,
+    "Photograph": 2100,
+    "Residence / domicile proof": 1218,
+    "Age proof / birth certificate": 1174,
+    "Caste certificate": 1065,
+    "Ration card": 939,
+    "Income certificate": 890,
+    "Educational certificates": 794,
+    "PAN card": 570,
+    "Disability certificate": 443,
+    "Mobile number": 208
+  },
+  "eligibility_words_median": 70,
+  "readability": {
+    "flesch_reading_ease_median": 43.1,
+    "fk_grade_median": 10.9,
+    "share_difficult_below_50": 0.662,
+    "n_texts": 4506
+  },
+  "near_duplicates": {
+    "threshold": 0.97,
+    "n_pairs": 375,
+    "examples": [
+      {
+        "a": "Freeship less than \u20b91,00,000 (UG students only)",
+        "a_state": "Uttarakhand",
+        "b": "Freeship less than \u20b91,00,000 (UG students only)",
+        "b_state": "Uttarakhand",
+        "cosine": 0.999
+      },
+      {
+        "a": "Supply of School Uniform and Tie belt to other than SC/ST Boys Students of Std I to VIII",
+        "a_state": "Dadra & Nagar Haveli and Daman & Diu",
+        "b": "Supply of School Uniform and Tie belt to SC/ST Boys/ Girls Students of Std I to VIII",
+        "b_state": "Dadra & Nagar Haveli and Daman & Diu",
+        "cosine": 0.999
+      },
+      {
+        "a": "Term Loan Scheme- Credit Line 1 for Minority Community",
+        "a_state": "Haryana",
+        "b": "Term Loan Scheme- Credit Line 2 for Minority Community",
+        "b_state": "Haryana",
+        "cosine": 0.998
+      },
+      {
+        "a": "National Awards For Empowerment Of Persons With Disabilities: National Awards For Institutions Engaged In Empowering Persons With Disabilities: Divyangjano Ke Liye Sarvshrestha Niyoktha",
+        "a_state": "Central",
+        "b": "National Awards For Empowerment Of Persons With Disabilities: National Awards For Institutions Engaged In Empowering Persons With Disabilities: Divyangjano Ke Liye Sarvshrestha Placement Agency",
+        "b_state": "Central",
+        "cosine": 0.998
+      },
+      {
+        "a": "Old Age Pension Scheme - On Completion of 60 Years (UKBOCWWB)",
+        "a_state": "Uttarakhand",
+        "b": "Old Age Pension Scheme- On Completion Of 65 Years (UKBOCWWB)",
+        "b_state": "Uttarakhand",
+        "cosine": 0.998
+      },
+      {
+        "a": "PMMSY: Ice Plant/Cold Store of Minimum 20-Ton Capacity - Haryana",
+        "a_state": "Haryana",
+        "b": "PMMSY: Ice Plant/Cold Store of Minimum 30-Ton Capacity - Haryana",
+        "b_state": "Haryana",
+        "cosine": 0.998
+      },
+      {
+        "a": "Scheme Of Coaching & Allied For Scheduled Castes",
+        "a_state": "Jharkhand",
+        "b": "Scheme Of Coaching & Allied For Scheduled Tribes",
+        "b_state": "Jharkhand",
+        "cosine": 0.998
+      },
+      {
+        "a": "PMMSY: Construction of Plant/Storage of Minimum 20 Tonne Capacity - Gujarat",
+        "a_state": "Gujarat",
+        "b": "PMMSY: Construction of Plant/Storage of Minimum 30 Tonne Capacity - Gujarat",
+        "b_state": "Gujarat",
+        "cosine": 0.997
+      }
+    ]
+  }
+}

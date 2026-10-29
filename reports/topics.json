@@ -1,0 +1,246 @@
+{
+  "model_selection": [
+    {
+      "k": 8,
+      "nmf_umass": -1.453,
+      "lda_umass": -1.378
+    },
+    {
+      "k": 12,
+      "nmf_umass": -1.46,
+      "lda_umass": -1.568
+    },
+    {
+      "k": 15,
+      "nmf_umass": -1.516,
+      "lda_umass": -1.619
+    },
+    {
+      "k": 20,
+      "nmf_umass": -1.569,
+      "lda_umass": -1.712
+    }
+  ],
+  "chosen": {
+    "model": "NMF",
+    "k": 8
+  },
+  "topics": [
+    {
+      "topic": 0,
+      "top_words": [
+        "students",
+        "student",
+        "class",
+        "scholarship",
+        "studying",
+        "education",
+        "school",
+        "classes",
+        "examination",
+        "course"
+      ],
+      "n_schemes": 584,
+      "share_central": 0.058,
+      "example_schemes": [
+        "Freeship less than \u20b91,00,000 (UG students only)",
+        "Pre-Matric Scholarship for Backward Class Students",
+        "Supply of School Uniform , Shoes Socks to all Students for Std IX to XII"
+      ],
+      "top_states": {
+        "Gujarat": 88,
+        "Madhya Pradesh": 76,
+        "Uttarakhand": 69
+      }
+    },
+    {
+      "topic": 1,
+      "top_words": [
+        "construction",
+        "worker",
+        "workers",
+        "building",
+        "board",
+        "registered",
+        "welfare",
+        "labour",
+        "deceased",
+        "death"
+      ],
+      "n_schemes": 474,
+      "share_central": 0.006,
+      "example_schemes": [
+        "Burial and Ex-gratia Payment Scheme in Case of Death of Unregistered Laborer During Work at Construction Site",
+        "Mukhyamantri Shramik Aujaar Sahayata Yojana",
+        "Safai Karmakaar Ke Putr/Putri Hetu Vishesh Coaching Yojana"
+      ],
+      "top_states": {
+        "Haryana": 56,
+        "Chhattisgarh": 44,
+        "Gujarat": 25
+      }
+    },
+    {
+      "topic": 2,
+      "top_words": [
+        "loan",
+        "subsidy",
+        "unit",
+        "units",
+        "sector",
+        "capital",
+        "enterprise",
+        "enterprises",
+        "manufacturing",
+        "project"
+      ],
+      "n_schemes": 638,
+      "share_central": 0.152,
+      "example_schemes": [
+        "Consortia & Tender Marketing Scheme",
+        "Incentive Scheme for MSMEs in Powerloom Sector: State Capital Investment Subsidy",
+        "Indira Mahila Shakti Udyam Protsahan Yojana"
+      ],
+      "top_states": {
+        "Gujarat": 126,
+        "Central": 97,
+        "Puducherry": 79
+      }
+    },
+    {
+      "topic": 3,
+      "top_words": [
+        "pension",
+        "family",
+        "poverty",
+        "line",
+        "bpl",
+        "age",
+        "income",
+        "monthly",
+        "social",
+        "resident"
+      ],
+      "n_schemes": 596,
+      "share_central": 0.074,
+      "example_schemes": [
+        "Immediate Relief Assistance\" under \"Welfare and Relief for Fishermen During Lean Seasons and Natural Calamities Scheme",
+        "Garuda Scheme for Funeral Expense",
+        "Nirman Shramik Jeevan va Bhavishya Suraksha Yojana"
+      ],
+      "top_states": {
+        "Gujarat": 57,
+        "Haryana": 53,
+        "Uttarakhand": 51
+      }
+    },
+    {
+      "topic": 4,
+      "top_words": [
+        "farmers",
+        "farmer",
+        "subsidy",
+        "cost",
+        "scheduled",
+        "land",
+        "agricultural",
+        "caste",
+        "hectare",
+        "gujarat"
+      ],
+      "n_schemes": 808,
+      "share_central": 0.073,
+      "example_schemes": [
+        "Krishak Utpadak Kshati Sahayata Yojana",
+        "Back Ended Investment Subsidy to Paddy Growers\" component of the \"Crop Production Technology\" scheme",
+        "Input Assistance to Farmers for Taking up Fish Farming in Farm Ponds\" Component of the \"Mukhyamantri Maschyajibi Kalyan Yojana\" Scheme"
+      ],
+      "top_states": {
+        "Gujarat": 225,
+        "Uttarakhand": 133,
+        "Central": 59
+      }
+    },
+    {
+      "topic": 5,
+      "top_words": [
+        "research",
+        "fellowship",
+        "india",
+        "training",
+        "institutions",
+        "award",
+        "candidates",
+        "institution",
+        "university",
+        "degree"
+      ],
+      "n_schemes": 985,
+      "share_central": 0.414,
+      "example_schemes": [
+        "AICTE SHORT TERM TRAINING PROGRAMME-SFURTI SCHEME",
+        "Fellowship for the Post-Graduate Students in Various Faculties Various Faculties of Sardarkrushinagar Dantiwada Agricultural University",
+        "Operation/implementation of Vidhik Seva Rath"
+      ],
+      "top_states": {
+        "Central": 408,
+        "Goa": 114,
+        "Uttarakhand": 93
+      }
+    },
+    {
+      "topic": 6,
+      "top_words": [
+        "abled",
+        "differently",
+        "persons",
+        "disability",
+        "person",
+        "tamil",
+        "nadu",
+        "disabilities",
+        "welfare",
+        "impaired"
+      ],
+      "n_schemes": 265,
+      "share_central": 0.057,
+      "example_schemes": [
+        "Exhibition\" Component of the \"Development Of Handicrafts\" Scheme",
+        "Exposure Tour for the Coir Artisans\" Component of the \"Development of Coir\" Scheme",
+        "Family Counseling\" under Grant-in-Aid to Pondicherry State Social Welfare Board"
+      ],
+      "top_states": {
+        "Tamil Nadu": 80,
+        "Puducherry": 35,
+        "Uttarakhand": 17
+      }
+    },
+    {
+      "topic": 7,
+      "top_words": [
+        "marriage",
+        "child",
+        "girl",
+        "children",
+        "bride",
+        "daughters",
+        "women",
+        "daughter",
+        "couple",
+        "girls"
+      ],
+      "n_schemes": 343,
+      "share_central": 0.07,
+      "example_schemes": [
+        "Incentive For The Intra Caste Marriage within Scheduled Tribe Community",
+        "Aama Kuni Pilaa",
+        "Aapki Beti Hamari Beti"
+      ],
+      "top_states": {
+        "Madhya Pradesh": 36,
+        "Uttarakhand": 34,
+        "Puducherry": 27
+      }
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+# Virtual environment (recreate with: python -m venv .venv && pip install -r requirements.txt)
+.venv/
+venv/
+
+# Python caches
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Local secrets (LLM_API_KEY etc.)
+.env
+.env.*
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
