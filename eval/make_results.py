@@ -39,9 +39,13 @@ def main():
 
     ext = R / "extraction_eval.md"
     if ext.exists():
-        out += ["## 2. Eligibility extraction", "",
-                "Agreement with the dataset's own machine-parsed fields. Neither side is ground truth: "
-                "a hand-labelled set is needed for accuracy (see README).", "",
+        intro = ("The first table is agreement with the dataset's own machine-parsed fields (neither side is "
+                 "ground truth). ")
+        intro += ("The other two score both against a labelled gold set of 100 random schemes "
+                  "(`data/test_sets/extraction_gold.csv`, rules in `extraction_gold_guidelines.md`)."
+                  if (config.TEST_SETS / "extraction_gold.csv").exists()
+                  else "A hand-labelled set is needed for accuracy (see README).")
+        out += ["## 2. Eligibility extraction", "", intro, "",
                 ext.read_text(encoding="utf-8"), ""]
 
     cl = load("classification.json")

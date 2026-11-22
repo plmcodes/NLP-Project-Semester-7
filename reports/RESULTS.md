@@ -15,7 +15,7 @@ Figures: `reports/figures/categories.png`, `states.png`, `documents.png`, `reada
 
 ## 2. Eligibility extraction
 
-Agreement with the dataset's own machine-parsed fields. Neither side is ground truth: a hand-labelled set is needed for accuracy (see README).
+The first table is agreement with the dataset's own machine-parsed fields (neither side is ground truth). The other two score both against a labelled gold set of 100 random schemes (`data/test_sets/extraction_gold.csv`, rules in `extraction_gold_guidelines.md`).
 
 ### Rule extractor vs dataset's machine-parsed fields (n=4693) - agreement, not accuracy
 
@@ -35,7 +35,41 @@ Agreement with the dataset's own machine-parsed fields. Neither side is ground t
 | caste General | 0.297 | 0.31 | 0.303 | |
 | caste micro | 0.674 | 0.862 | 0.756 | |
 
-_No hand-labelled gold set yet: fill in data/test_sets/extraction_gold_template.csv and save it as extraction_gold.csv, then rerun._
+### Rule extractor vs hand labels (n=100)
+
+| Field | Precision | Recall | F1 | Accuracy |
+|---|---|---|---|---|
+| age_min | 0.778 | 0.7 | 0.737 | 0.92 |
+| age_max | 1.0 | 0.714 | 0.833 | 0.94 |
+| income_max | 0.957 | 0.957 | 0.957 | 0.98 |
+| gender_female | 0.667 | 1.0 | 0.8 | 0.95 |
+| disability | 0.615 | 0.889 | 0.727 | 0.94 |
+| bpl | 1.0 | 0.75 | 0.857 | 0.99 |
+| residence_rural | 1.0 | 0.333 | 0.5 | 0.98 |
+| residence_urban | 0.0 | 0.0 | 0.0 | 0.97 |
+| caste SC | 0.786 | 0.846 | 0.815 | |
+| caste ST | 0.818 | 1.0 | 0.9 | |
+| caste OBC | 0.857 | 0.857 | 0.857 | |
+| caste General | 0.667 | 0.5 | 0.571 | |
+| caste micro | 0.8 | 0.848 | 0.824 | |
+
+### Dataset's parsed fields vs hand labels (n=100)
+
+| Field | Precision | Recall | F1 | Accuracy |
+|---|---|---|---|---|
+| age_min | 1.0 | 0.95 | 0.974 | 0.99 |
+| age_max | 0.95 | 0.905 | 0.927 | 0.98 |
+| income_max | 1.0 | 0.87 | 0.93 | 0.97 |
+| gender_female | 1.0 | 1.0 | 1.0 | 1.0 |
+| disability | 1.0 | 0.889 | 0.941 | 0.99 |
+| bpl | 1.0 | 0.75 | 0.857 | 0.99 |
+| residence_rural | 1.0 | 0.333 | 0.5 | 0.98 |
+| residence_urban | 0.0 | 0.0 | 0.0 | 1.0 |
+| caste SC | 1.0 | 1.0 | 1.0 | |
+| caste ST | 1.0 | 1.0 | 1.0 | |
+| caste OBC | 1.0 | 0.857 | 0.923 | |
+| caste General | 1.0 | 0.25 | 0.4 | |
+| caste micro | 1.0 | 0.879 | 0.935 | |
 
 
 ## 3. Sector classification (15 categories, multi-label)
@@ -106,5 +140,14 @@ Wilcoxon signed-rank on reciprocal rank:
 - Precision 0.937, recall 0.857, Jaccard 0.809
 - Share of schemes kept per persona: 0.109
 
-_No hand-labelled queries yet (data/test_sets/queries.csv)._
+### Hand-labelled queries (29)
+
+| System | P@5 | Recall@10 | MRR | nDCG@10 |
+|---|---|---|---|---|
+| 1 keyword (scheme names) | 0.469 | 0.3224 | 0.6595 | 0.456 |
+| 2 TF-IDF | 0.5586 | 0.4771 | 0.8272 | 0.64 |
+| 3 BM25 | 0.6 | 0.4826 | 0.7869 | 0.6452 |
+| 4 dense (e5) | 0.6069 | 0.5229 | 0.819 | 0.6848 |
+| 5 BM25 + dense (RRF) | 0.6552 | 0.5145 | 0.8807 | 0.6916 |
+| 6 hybrid + cross-encoder re-rank | 0.6345 | 0.5145 | 0.8805 | 0.688 |
 

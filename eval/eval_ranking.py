@@ -226,14 +226,20 @@ def labelled_queries(df: pd.DataFrame) -> dict | None:
 
 
 def write_pool(df: pd.DataFrame):
-    """Top-10 candidates from three systems per query, for the team to judge."""
+    """Top-10 candidates from every system per query, for the team to judge.
+
+    The re-ranker only reorders the hybrid top 10, so it adds no new candidates.
+    """
     src = pd.read_csv(QUERIES) if QUERIES.exists() else pd.read_csv(QUERY_TEMPLATE)
     texts = df.search_text.tolist()
     index = HybridIndex(texts, scheme_embeddings(df))
+    names_tok = [set(tokenize(x)) for x in df.name]
     rows = []
     for query in src["query"]:
         qv = embed_queries([query])[0]
-        pool = dict.fromkeys(index.search_bm25(query, 10) + index.search_dense(query, 10, qv) + index.search_hybrid(query, 10, qv))
+        pool = dict.fromkeys(index.search_bm25(query, 10) + index.search_dense(query, 10, qv)
+                             + index.search_hybrid(query, 10, qv) + index.search_tfidf(query, 10)
+                             + keyword_name_search(names_tok, query, 10))
         for i in pool:
             rows.append({"query": query, "id": df.id.iat[i], "name": df.name.iat[i], "state": df.state.iat[i],
                          "summary": df.description.iat[i][:300], "relevant (1/0)": ""})

@@ -87,5 +87,45 @@
     "jaccard": 0.809,
     "share_of_schemes_kept": 0.109
   },
-  "labelled_queries": null
+  "labelled_queries": {
+    "n_queries": 29,
+    "results": {
+      "1 keyword (scheme names)": {
+        "P@5": 0.469,
+        "Recall@10": 0.3224,
+        "MRR": 0.6595,
+        "nDCG@10": 0.456
+      },
+      "2 TF-IDF": {
+        "P@5": 0.5586,
+        "Recall@10": 0.4771,
+        "MRR": 0.8272,
+        "nDCG@10": 0.64
+      },
+      "3 BM25": {
+        "P@5": 0.6,
+        "Recall@10": 0.4826,
+        "MRR": 0.7869,
+        "nDCG@10": 0.6452
+      },
+      "4 dense (e5)": {
+        "P@5": 0.6069,
+        "Recall@10": 0.5229,
+        "MRR": 0.819,
+        "nDCG@10": 0.6848
+      },
+      "5 BM25 + dense (RRF)": {
+        "P@5": 0.6552,
+        "Recall@10": 0.5145,
+        "MRR": 0.8807,
+        "nDCG@10": 0.6916
+      },
+      "6 hybrid + cross-encoder re-rank": {
+        "P@5": 0.6345,
+        "Recall@10": 0.5145,
+        "MRR": 0.8805,
+        "nDCG@10": 0.688
+      }
+    }
+  }
 }

@@ -80,18 +80,26 @@ Models (all run on CPU): `intfloat/multilingual-e5-small` (embeddings, 118M para
 | What | Result |
 |---|---|
 | Corpus | 4,693 schemes (684 central, 4,009 state, 36 states/UTs). 66% of eligibility texts are "difficult" to read (Flesch < 50; median grade level 10.9) |
-| Eligibility extraction | Agreement F1 with the dataset's own parsed fields: income cap 0.94, age min/max 0.81–0.82, SC/ST 0.80, women-only 0.76. Agreement, not accuracy (no hand labels yet) |
+| Eligibility extraction (100 labelled schemes) | Our rules, F1: income cap 0.96, age max 0.83, age min 0.74, women-only 0.80, caste 0.82, disability 0.73, BPL 0.86. The dataset's own parsed fields score higher on most fields (caste 0.94, age min 0.97, women-only 1.00) |
 | Sector classifier (15 classes) | TF-IDF + LR micro-F1 **0.794** vs multilingual-e5 + LR 0.703; difference significant (Wilcoxon p ≈ 2e-14) |
 | Topics | NMF with 8 topics: students, construction workers, business loans, pensions/BPL, farmers, research fellowships, disability, marriage/girl child |
 | Known-item search (150 queries) | MRR: keyword 0.19 → TF-IDF 0.50 → BM25 0.56 → dense 0.50 → **hybrid 0.57** (Recall@10 0.78). Hybrid beats dense alone (p = 0.0001) but not BM25 (p = 0.15). Cross-encoder re-rank did not help (0.54, p = 0.21) |
+| Labelled citizen queries (29) | P@5 / MRR / nDCG@10: keyword 0.47 / 0.66 / 0.46 → BM25 0.60 / 0.79 / 0.65 → dense 0.61 / 0.82 / 0.68 → **hybrid 0.66 / 0.88 / 0.69**. Re-rank adds nothing (0.63 / 0.88 / 0.69). With realistic queries, dense search catches up with BM25, unlike in the known-item test |
 | Hindi queries (20 pairs) | Top-10 overlap with the English version: BM25 0.00, dense 0.46, hybrid 0.38, so multilingual embeddings are what make Hindi search work |
 | Eligibility filter (200 personas) | Agrees with a filter built on the dataset's parsed fields: precision 0.94, recall 0.86; keeps about 11% of schemes per person |
 | Scraper | 5/5 live myScheme pages scraped; eligibility text unchanged since the dataset (July 2026) |
 
 ### Limitations (say these in the viva before the examiner does)
 
-- No hand-labelled ground truth yet: extraction and filter numbers are agreement with another
-  machine-made labelling. See "What the team still needs to do".
+- Extraction accuracy comes from only 100 labelled schemes (`data/test_sets/extraction_gold.csv`),
+  so each figure has a wide margin of error. The eligibility-filter numbers still have no
+  hand-labelled ground truth.
+- Search relevance was judged on a pool of each system's top 10 (`data/test_sets/queries_guidelines.md`),
+  by one judge, on 29 queries. Relevant schemes no system found are mostly missing, so recall is
+  an upper estimate. The Maharashtra tube-well query has no matching scheme in the dataset.
+- The dataset's own parsed fields beat our rules on most fields. Common rule errors: "not more
+  than 30 years" read as a minimum age; schemes that only mention a widow, daughter or women's
+  group as one option marked women-only; groups mentioned as alternatives ("SC, ST or PwD") read as requirements.
 - The known-item test takes queries from scheme descriptions, so it favours keyword overlap
   (BM25) more than real citizen queries would.
 - Rules miss unusual phrasing and sometimes read a benefit for a group as a requirement
@@ -103,12 +111,12 @@ Models (all run on CPU): `intfloat/multilingual-e5-small` (embeddings, 118M para
 
 ## What the team still needs to do
 
-1. **Hand-label extraction gold set**: fill `data/test_sets/extraction_gold_template.csv`
-   (100 schemes), save as `extraction_gold.csv`, rerun `python -m eval.eval_extraction`.
-   This gives real accuracy for both our extractor and the dataset's parsed fields.
-2. **Hand-label search queries**: `python -m eval.eval_ranking --pool` writes
-   `queries_pool.csv` (candidate schemes per query). Mark relevant ones, put them in
-   `queries.csv` as `query,relevant_ids` (ids separated by `;`), rerun `python -m eval.eval_ranking`.
+1. **Review the extraction gold set** (done 2026-11-22: `data/test_sets/extraction_gold.csv`,
+   rules in `extraction_gold_guidelines.md`). Check the rows with a note; after any change rerun
+   `python -m eval.eval_extraction` and `python -m eval.make_results`.
+2. **Review the search relevance labels** (done 2026-11-22: `data/test_sets/queries.csv`, every
+   judged pair in `queries_pool.csv`, rules in `queries_guidelines.md`). After any change rerun
+   `python -m eval.eval_ranking` and `python -m eval.make_results`.
 3. **User study**: System Usability Scale with 10-15 users.
 4. Optional upgrades: fine-tuned NER on the gold labels, IndicTrans2 translation, voice input.
 

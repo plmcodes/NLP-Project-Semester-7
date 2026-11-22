@@ -92,5 +92,192 @@
         "f1": 0.756
       }
     }
+  },
+  "n_gold": 100,
+  "rules_vs_gold": {
+    "age_min": {
+      "precision": 0.778,
+      "recall": 0.7,
+      "f1": 0.737,
+      "accuracy": 0.92,
+      "pred_found": 18,
+      "ref_found": 20
+    },
+    "age_max": {
+      "precision": 1.0,
+      "recall": 0.714,
+      "f1": 0.833,
+      "accuracy": 0.94,
+      "pred_found": 15,
+      "ref_found": 21
+    },
+    "income_max": {
+      "precision": 0.957,
+      "recall": 0.957,
+      "f1": 0.957,
+      "accuracy": 0.98,
+      "pred_found": 23,
+      "ref_found": 23
+    },
+    "gender_female": {
+      "precision": 0.667,
+      "recall": 1.0,
+      "f1": 0.8,
+      "accuracy": 0.95,
+      "pred_pos": 15,
+      "ref_pos": 10
+    },
+    "disability": {
+      "precision": 0.615,
+      "recall": 0.889,
+      "f1": 0.727,
+      "accuracy": 0.94,
+      "pred_pos": 13,
+      "ref_pos": 9
+    },
+    "bpl": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.857,
+      "accuracy": 0.99,
+      "pred_pos": 3,
+      "ref_pos": 4
+    },
+    "residence_rural": {
+      "precision": 1.0,
+      "recall": 0.333,
+      "f1": 0.5,
+      "accuracy": 0.98,
+      "pred_pos": 1,
+      "ref_pos": 3
+    },
+    "residence_urban": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 0.97,
+      "pred_pos": 3,
+      "ref_pos": 0
+    },
+    "castes": {
+      "SC": {
+        "precision": 0.786,
+        "recall": 0.846,
+        "f1": 0.815
+      },
+      "ST": {
+        "precision": 0.818,
+        "recall": 1.0,
+        "f1": 0.9
+      },
+      "OBC": {
+        "precision": 0.857,
+        "recall": 0.857,
+        "f1": 0.857
+      },
+      "General": {
+        "precision": 0.667,
+        "recall": 0.5,
+        "f1": 0.571
+      },
+      "micro": {
+        "precision": 0.8,
+        "recall": 0.848,
+        "f1": 0.824
+      }
+    }
+  },
+  "silver_vs_gold": {
+    "age_min": {
+      "precision": 1.0,
+      "recall": 0.95,
+      "f1": 0.974,
+      "accuracy": 0.99,
+      "pred_found": 19,
+      "ref_found": 20
+    },
+    "age_max": {
+      "precision": 0.95,
+      "recall": 0.905,
+      "f1": 0.927,
+      "accuracy": 0.98,
+      "pred_found": 20,
+      "ref_found": 21
+    },
+    "income_max": {
+      "precision": 1.0,
+      "recall": 0.87,
+      "f1": 0.93,
+      "accuracy": 0.97,
+      "pred_found": 20,
+      "ref_found": 23
+    },
+    "gender_female": {
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0,
+      "accuracy": 1.0,
+      "pred_pos": 10,
+      "ref_pos": 10
+    },
+    "disability": {
+      "precision": 1.0,
+      "recall": 0.889,
+      "f1": 0.941,
+      "accuracy": 0.99,
+      "pred_pos": 8,
+      "ref_pos": 9
+    },
+    "bpl": {
+      "precision": 1.0,
+      "recall": 0.75,
+      "f1": 0.857,
+      "accuracy": 0.99,
+      "pred_pos": 3,
+      "ref_pos": 4
+    },
+    "residence_rural": {
+      "precision": 1.0,
+      "recall": 0.333,
+      "f1": 0.5,
+      "accuracy": 0.98,
+      "pred_pos": 1,
+      "ref_pos": 3
+    },
+    "residence_urban": {
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "accuracy": 1.0,
+      "pred_pos": 0,
+      "ref_pos": 0
+    },
+    "castes": {
+      "SC": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "ST": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1": 1.0
+      },
+      "OBC": {
+        "precision": 1.0,
+        "recall": 0.857,
+        "f1": 0.923
+      },
+      "General": {
+        "precision": 1.0,
+        "recall": 0.25,
+        "f1": 0.4
+      },
+      "micro": {
+        "precision": 1.0,
+        "recall": 0.879,
+        "f1": 0.935
+      }
+    }
   }
 }

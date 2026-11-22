@@ -29,4 +29,13 @@ Wilcoxon signed-rank on reciprocal rank:
 - Precision 0.937, recall 0.857, Jaccard 0.809
 - Share of schemes kept per persona: 0.109
 
-_No hand-labelled queries yet (data/test_sets/queries.csv)._
+### Hand-labelled queries (29)
+
+| System | P@5 | Recall@10 | MRR | nDCG@10 |
+|---|---|---|---|---|
+| 1 keyword (scheme names) | 0.469 | 0.3224 | 0.6595 | 0.456 |
+| 2 TF-IDF | 0.5586 | 0.4771 | 0.8272 | 0.64 |
+| 3 BM25 | 0.6 | 0.4826 | 0.7869 | 0.6452 |
+| 4 dense (e5) | 0.6069 | 0.5229 | 0.819 | 0.6848 |
+| 5 BM25 + dense (RRF) | 0.6552 | 0.5145 | 0.8807 | 0.6916 |
+| 6 hybrid + cross-encoder re-rank | 0.6345 | 0.5145 | 0.8805 | 0.688 |
